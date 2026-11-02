@@ -26,13 +26,17 @@ Windows: `./gradlew.bat build -x test`
 
 This will produce the binaries in the build folder.
 
-### Running Benchmark main programs:
+This project was completed as part of my multiprocessor programming course. It focuses on implementing and comparing the performance of different synchronization locks.
 
-__Benchmark__:
-`java -cp build/libs/homework4.jar edu.vt.ece.hw4.Benchmark <YOUR_ARGS>`
+**Locks Implemented**
 
-## Intellij
+MCS Lock: A queue-based lock that is scalable and fair.
+TTAS Lock: Reduces contention with a test-and-test-and-set approach.
+TAS Lock: A simple spinlock using a test-and-set mechanism.
+ALock: Uses an array to implement a queue-based lock.
+CLH Lock: A scalable, queue-based lock with local spinning.
+**Features**
 
-This gradle project can be imported into Intellj by going to `File -> Open` and choosing this directory. As soon as you open the project, a pop-up dialog may appear in the bottom right of the screen asking to import the project with Gradle. Accept it.
-
-For more instructions, go to https://www.jetbrains.com/help/idea/gradle.html#gradle_import_project_start
+Implementation of multiple locks in a modular way.
+Performance testing under various contention levels.
+Comparison of locks based on waiting time, throughput, and scalability
